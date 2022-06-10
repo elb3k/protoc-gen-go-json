@@ -27,7 +27,6 @@ func TestSimple(t *testing.T) {
 }
 
 func TestComplex(t *testing.T) {
-
 	// Complex type that includes Hello
 	type Complex struct {
 		Param string

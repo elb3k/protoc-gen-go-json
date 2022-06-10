@@ -10,12 +10,10 @@ enum Status {
     STATUS_FAILED = 2;
 }
 
-
 message Hello {
     Status status = 1;
     oneof param {
         string text = 2;
         int32 num = 3;
     }
-
 }
