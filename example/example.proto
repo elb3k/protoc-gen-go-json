@@ -4,6 +4,18 @@ package example;
 
 option go_package = "github.com/elb3k/protoc-gen-go-json/example";
 
+enum Status {
+    UNKNOWN_STATUS = 0;
+    STATUS_PASSED = 1;
+    STATUS_FAILED = 2;
+}
+
+
 message Hello {
+    Status status = 1;
+    oneof param {
+        string text = 2;
+        int32 num = 3;
+    }
 
 }
