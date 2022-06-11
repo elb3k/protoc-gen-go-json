@@ -3,6 +3,7 @@ module github.com/elb3k/protoc-gen-go-json
 go 1.18
 
 require (
+	github.com/golang/protobuf v1.5.0
 	github.com/stretchr/testify v1.7.2
 	google.golang.org/protobuf v1.28.0
 )
