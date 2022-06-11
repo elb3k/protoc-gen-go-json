@@ -27,4 +27,30 @@ Since `protojson` supports all of the features of proto, so this plugin should t
 go install github.com/elb3k/protoc-gen-go-json/cmd/protoc-gen-go-json
 ```
 
+
+## Usage
+Plugin is supported by `protoc` and `buf`
+
+
+## Protoc usage
+
+After the plugin is installed
+```bash
+protoc  --go-json_out=. --go-json_opt=paths=source_relative --go_out=. --go_opt=paths=source_relative  ./example/example.proto
+```
+
+## Buf usage
+Plugin can be added as any other buf plugin:
+```yaml
+plugins:
+  # Other plugins (Go plugin is required)
+  - name: protoc-gen-go-json
+    path: protoc-gen-go-json
+    out: example
+    opt:
+      - lang=go
+      - paths=source_relative
+```
+
+
 Enjoy!
