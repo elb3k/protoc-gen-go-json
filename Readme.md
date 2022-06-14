@@ -23,7 +23,7 @@ func (p *Hello) UnmarshalJSON(data []byte) error {
 	return jsonpb.Unmarshal(bytes.NewBuffer(data), p)
 }
 ```
-So `json.Marshal` and `json.Unmarshal` uses protojson variant.
+If this plugin is uses `json.Marshal` and `json.Unmarshal` will use jsonpb functions.
 Since `jsonpb` supports all of the features of proto, so this plugin should too.
 
 
